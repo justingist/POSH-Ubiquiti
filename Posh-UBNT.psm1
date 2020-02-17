@@ -26,6 +26,7 @@ Param(
 }
 
 function Create-AesManagedObject($key, $IV) {
+# Credit for this function! https://gist.github.com/ctigeek/2a56648b923d198a6e60
     $aesManaged = New-Object "System.Security.Cryptography.AesManaged"
     $aesManaged.Mode = [System.Security.Cryptography.CipherMode]::CBC
     $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::Zeros
